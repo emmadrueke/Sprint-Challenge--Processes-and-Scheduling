@@ -8,11 +8,14 @@ Add your answers inline, below, with your pull request.
    standard Unix system. Briefly explain what each of these states mean.
 
 2. What is a Zombie Process? How does it get created? How does it get destroyed?
-
+    A process will have a parent process and a child process. The child process will run complete it's task, but the parent process may sit in the background waiting 
 3. Describe the job of the Scheduler in the OS in general.
-
+    The Scheduler organizes processes by priority, the time they need to run, 
+    a then creates a schedule on when those processes can run, how long they can run. 
 4. Describe the benefits of the MLFQ over a plain Round-Robin scheduler.
-
+    MultiLevel Feedback Queue allows the scheduler to organize processes by priority levels. If a process is taking up too much CPU time it is demoted to a lower priority level so that other processes can have a chance to run. It also has multiple queue's so that multiple process can run at the same time. 
+    Round Robin scheduler splices the time a process can run equally between all the processes and with out priority to any one program. It means that all the programs will have CPU time. 
+    
 ## Programming Exercise: The Lambda School Shell (`lssh`)
 
 This program implements a new shell that you can use to run commands from in
