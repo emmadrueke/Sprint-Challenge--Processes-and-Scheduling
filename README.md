@@ -8,7 +8,7 @@ Add your answers inline, below, with your pull request.
    standard Unix system. Briefly explain what each of these states mean.
 
 2. What is a Zombie Process? How does it get created? How does it get destroyed?
-    A process will have a parent process and a child process. The child process will run complete it's task, but the parent process may sit in the background waiting 
+    A process will have a parent process and a child process. The child process will run and complete it's task. Once the child process is completed it sends a termination signal to the parent that it is complete and the parent reaps the status of the child and removes it from the process table. Some times, the parent will complete it's task before it recieves the termination signal from the child so then the childs termination signal is sitting in the process table indefinately. So the process table has a finate room for processes. 
 3. Describe the job of the Scheduler in the OS in general.
     The Scheduler organizes processes by priority, the time they need to run, 
     a then creates a schedule on when those processes can run, how long they can run. 
